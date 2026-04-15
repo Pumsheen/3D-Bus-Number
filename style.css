@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family:"Poppins", sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: lightskyblue;
+}
+
+.container{
+    width: 80%;
+    max-width: 700px;
+    padding: 20px;
+    background-color:aliceblue;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1)
+}
+
+h1{
+    color: black;
+    margin-bottom: 20px;
+
+}
+
+#recordBtn{
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: rgb(21, 120, 21);
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+#recordBtn.recording{
+    background-color: rgb(114, 5, 5);
+}
+
+#transcript{
+    margin: 20px 0;
+    padding: 15px;
+    min-height: 150px;
+    background-color:white ;
+    border: 1px solid grey;
+    overflow: auto;
+    font-size: 16px;
+    color: black;
+}
+
+.controls button{
+    margin: 10px 5px;
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
+}
+
+#copyBtn{
+    background-color: peachpuff;
+}
+
+#saveBtn{
+    background-color: orange;
+}
+
+#clearBtn{
+    background-color: maroon;
+}

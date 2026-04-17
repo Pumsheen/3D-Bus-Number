@@ -71,7 +71,7 @@ recognition.onresult = (event) => {
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify({ bus })
+            body: JSON.stringify({ bus: bus })
         });
     } else {
         transcriptDiv.innerHTML = "No bus number detected.";

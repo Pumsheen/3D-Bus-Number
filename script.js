@@ -79,7 +79,20 @@ recognition.onresult= (event) => {
     let transcript="";
     for (let i = event.resultIndex; i<event.results.length; i++){
         transcript+=(event.results)[i][0].transcript;
-    }
+        document.getElementById("transcript").innerText = text;
+
+    let bus = extractBusNumber(text);
+    console.log("Sending bus:", bus);
+
+    // 🔥 SEND TO BACKEND HERE
+    fetch("https://threed-bus-number.onrender.com/bus", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ bus: bus })
+    });
+};
     let busNumber = extractBusNumber(transcript);
 
     if(busNumber){

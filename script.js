@@ -79,6 +79,8 @@ recognition.onresult= (event) => {
     let transcript="";
     for (let i = event.resultIndex; i<event.results.length; i++){
         transcript+=(event.results)[i][0].transcript;
+        console.log(document.getElementById("transcript"));
+        console.log(text);
         document.getElementById("transcript").innerText = text;
 
     let bus = extractBusNumber(text);
